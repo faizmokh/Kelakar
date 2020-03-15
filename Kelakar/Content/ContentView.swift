@@ -17,7 +17,15 @@ struct ContentView: View {
     }
 
     var body: some View {
-        Text(viewModel.joke?.joke ?? "")
+        VStack {
+            Text(viewModel.joke?.joke ?? "")
+                .font(.system(size: 32, weight: .medium, design: .rounded))
+                .padding(20)
+        }
+        .contentShape(Rectangle())
+        .gesture(TapGesture().onEnded({ _ in
+            self.viewModel.fetchRandomJoke()
+        }))
             .onAppear {
                 self.viewModel.fetchRandomJoke()
         }
