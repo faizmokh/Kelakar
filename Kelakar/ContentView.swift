@@ -9,8 +9,18 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @ObservedObject private var viewModel: ContentViewModel
+
+    init() {
+        self.viewModel = ContentViewModel(worker: APIWorker())
+    }
+
     var body: some View {
-        Text("Hello, World!")
+        Text(viewModel.joke?.joke ?? "")
+            .onAppear {
+                self.viewModel.fetchRandomJoke()
+        }
     }
 }
 

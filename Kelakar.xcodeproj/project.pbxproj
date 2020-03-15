@@ -15,6 +15,9 @@
 		9807E57A241E6BCE00E85A46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9807E578241E6BCE00E85A46 /* LaunchScreen.storyboard */; };
 		9807E585241E6BCE00E85A46 /* KelakarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9807E584241E6BCE00E85A46 /* KelakarTests.swift */; };
 		9807E591241E708F00E85A46 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9807E590241E708F00E85A46 /* Alamofire */; };
+		9807E593241E70B700E85A46 /* APIWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9807E592241E70B700E85A46 /* APIWorker.swift */; };
+		9807E597241E716D00E85A46 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9807E596241E716D00E85A46 /* Joke.swift */; };
+		9807E599241E72B900E85A46 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9807E598241E72B900E85A46 /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,9 @@
 		9807E580241E6BCE00E85A46 /* KelakarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KelakarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9807E584241E6BCE00E85A46 /* KelakarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KelakarTests.swift; sourceTree = "<group>"; };
 		9807E586241E6BCE00E85A46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9807E592241E70B700E85A46 /* APIWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWorker.swift; sourceTree = "<group>"; };
+		9807E596241E716D00E85A46 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
+		9807E598241E72B900E85A46 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +87,12 @@
 		9807E56C241E6BCC00E85A46 /* Kelakar */ = {
 			isa = PBXGroup;
 			children = (
+				9807E595241E716100E85A46 /* Models */,
+				9807E594241E70BE00E85A46 /* Workers */,
 				9807E56D241E6BCC00E85A46 /* AppDelegate.swift */,
 				9807E56F241E6BCC00E85A46 /* SceneDelegate.swift */,
 				9807E571241E6BCC00E85A46 /* ContentView.swift */,
+				9807E598241E72B900E85A46 /* ContentViewModel.swift */,
 				9807E573241E6BCE00E85A46 /* Assets.xcassets */,
 				9807E578241E6BCE00E85A46 /* LaunchScreen.storyboard */,
 				9807E57B241E6BCE00E85A46 /* Info.plist */,
@@ -107,6 +116,22 @@
 				9807E586241E6BCE00E85A46 /* Info.plist */,
 			);
 			path = KelakarTests;
+			sourceTree = "<group>";
+		};
+		9807E594241E70BE00E85A46 /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				9807E592241E70B700E85A46 /* APIWorker.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		9807E595241E716100E85A46 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9807E596241E716D00E85A46 /* Joke.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,7 +242,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9807E56E241E6BCC00E85A46 /* AppDelegate.swift in Sources */,
+				9807E597241E716D00E85A46 /* Joke.swift in Sources */,
+				9807E599241E72B900E85A46 /* ContentViewModel.swift in Sources */,
 				9807E570241E6BCC00E85A46 /* SceneDelegate.swift in Sources */,
+				9807E593241E70B700E85A46 /* APIWorker.swift in Sources */,
 				9807E572241E6BCC00E85A46 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
