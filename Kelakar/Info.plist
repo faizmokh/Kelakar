@@ -56,5 +56,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>Unsplash Client ID</key>
+	<string>${UNSPLASH_CLIENT_ID}</string>
 </dict>
 </plist>

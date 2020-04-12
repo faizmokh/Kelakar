@@ -12,6 +12,8 @@ import Combine
 class ContentViewModel: ObservableObject {
     @Published var joke: Joke?
 
+    @Published var photo: Photo?
+
     let worker: APIWorker
 
     init(worker: APIWorker) {
@@ -23,6 +25,17 @@ class ContentViewModel: ObservableObject {
             switch result {
             case .success(let joke):
                 self.joke = joke
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+
+    func fetchBackgroundPhoto() {
+        worker.fetchRandomPhotos { result in
+            switch result {
+            case .success(let photo):
+                self.photo = photo
             case .failure(let error):
                 print(error.localizedDescription)
             }

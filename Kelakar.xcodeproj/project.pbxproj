@@ -20,6 +20,7 @@
 		9807E599241E72B900E85A46 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9807E598241E72B900E85A46 /* ContentViewModel.swift */; };
 		98A7B6752443084C00786A25 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A7B6742443084C00786A25 /* Photo.swift */; };
 		98A7B67824430A1900786A25 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 98A7B67724430A1900786A25 /* KingfisherSwiftUI */; };
+		98A7B67A2443157900786A25 /* Keys.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 98A7B6792443157900786A25 /* Keys.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		9807E596241E716D00E85A46 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 		9807E598241E72B900E85A46 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		98A7B6742443084C00786A25 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		98A7B6792443157900786A25 /* Keys.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Keys.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 		9807E561241E6BCC00E85A46 = {
 			isa = PBXGroup;
 			children = (
+				98A7B6792443157900786A25 /* Keys.xcconfig */,
 				9807E56C241E6BCC00E85A46 /* Kelakar */,
 				9807E583241E6BCE00E85A46 /* KelakarTests */,
 				9807E56B241E6BCC00E85A46 /* Products */,
@@ -236,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98A7B67A2443157900786A25 /* Keys.xcconfig in Resources */,
 				9807E57A241E6BCE00E85A46 /* LaunchScreen.storyboard in Resources */,
 				9807E577241E6BCE00E85A46 /* Preview Assets.xcassets in Resources */,
 				9807E574241E6BCE00E85A46 /* Assets.xcassets in Resources */,
@@ -298,6 +302,7 @@
 /* Begin XCBuildConfiguration section */
 		9807E587241E6BCE00E85A46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98A7B6792443157900786A25 /* Keys.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -358,6 +363,7 @@
 		};
 		9807E588241E6BCE00E85A46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98A7B6792443157900786A25 /* Keys.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

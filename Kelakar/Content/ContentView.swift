@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import KingfisherSwiftUI
 
 struct ContentView: View {
 
@@ -17,17 +18,39 @@ struct ContentView: View {
     }
 
     var body: some View {
-        VStack {
-            Text(viewModel.joke?.joke ?? "")
-                .font(.system(size: 32, weight: .medium, design: .rounded))
-                .padding(20)
+        ZStack {
+            KFImage(URL(string: viewModel.photo?.urls.regular ?? ""))
+                .resizable()
+                .aspectRatio(1, contentMode: .fill)
+                .blur(radius: 1)
+                .frame(maxWidth: UIScreen.main.bounds.width,
+                       maxHeight: UIScreen.main.bounds.height)
+                .animation(.easeIn(duration: 1.0))
+                .transition(.opacity)
+            Rectangle()
+                .foregroundColor(.clear)
+                .background(LinearGradient(gradient: Gradient(colors: [.clear, .black]), startPoint: .top, endPoint: .bottom))
+                .frame(maxWidth: UIScreen.main.bounds.width,
+                       maxHeight: UIScreen.main.bounds.height)
+            VStack {
+                Text(self.viewModel.joke?.joke ?? "")
+                    .font(.system(size: 32, weight: .medium, design: .rounded))
+                    .foregroundColor(.white)
+                    .padding(20)
+                    .contentShape(Rectangle())
+                    .gesture(TapGesture().onEnded({ _ in
+                        self.viewModel.fetchRandomJoke()
+                        self.viewModel.fetchBackgroundPhoto()
+                    }))
+            }
+            .animation(.easeIn(duration: 1.0))
+            .transition(.opacity)
         }
-        .contentShape(Rectangle())
-        .gesture(TapGesture().onEnded({ _ in
+        .edgesIgnoringSafeArea(.all)
+
+        .onAppear {
             self.viewModel.fetchRandomJoke()
-        }))
-            .onAppear {
-                self.viewModel.fetchRandomJoke()
+            self.viewModel.fetchBackgroundPhoto()
         }
     }
 }
