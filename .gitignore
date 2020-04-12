@@ -81,4 +81,8 @@ fastlane/test_output
 
 iOSInjectionProject/
 
+# Secrets
+
+Keys.xcconfig
+
 # End of https://www.gitignore.io/api/swift
