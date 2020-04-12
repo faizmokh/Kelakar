@@ -9,6 +9,15 @@
           "revision": "69a3338fa7eb429bd2845f74e76a78e24b425c6c",
           "version": "5.0.3"
         }
+      },
+      {
+        "package": "Kingfisher",
+        "repositoryURL": "https://github.com/onevcat/Kingfisher",
+        "state": {
+          "branch": null,
+          "revision": "349ed06467a6f8a4939bcb83db301542bc84eac9",
+          "version": "5.13.4"
+        }
       }
     ]
   },
